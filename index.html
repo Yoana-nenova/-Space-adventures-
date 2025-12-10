@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space adventures</title>
+
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: black;
+        }
+
+        nav {
+            width: 100%;
+            background: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 18px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        nav a::before,
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #2760ff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav a::before {
+            top: 0;
+            transform-origin: left;
+        }
+
+        nav a::after {
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        
+        nav a:hover::before,
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        nav a:hover span::before,
+        nav a:hover span::after {
+            transform: scaleY(1);
+        }
+
+         nav {
+            width: 100%;
+            background: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+           height: 50px; 
+           width: 50px;
+           margin: 0;
+        }
+
+
+        .parallax {
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 0 0 15px black;
+            margin-top: 60px; 
+        }
+
+        .control_panel {
+            background-image: url("https://imgcdn.stablediffusionweb.com/2024/12/19/d96e92a0-0ef0-4c57-b170-6d4788054646.jpg");
+        }
+
+        .ekipaj {
+            background-image: url("https://th.bing.com/th/id/R.d44ca7bdb89dd1c1f3572675394379f5?rik=Y9RBuw5AvxNSdw&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fshots%2fl%2f469411-moonbase-alpha-windows-screenshot-astronauts-and-the-lunar.jpg&ehk=nGNesBrtfUMnfalZiEplTYG3%2f%2bqlNRO07xahvP6wMTk%3d&risl=&pid=ImgRaw&r=0");
+        }
+
+        .info_za_chlen_na_ekipaja {
+            background-image: url("https://img.freepik.com/premium-photo/astronaut-alien-planet_989064-1128.jpg");
+        }
+
+        .status_na_koraba {
+            height: 500px;
+            background-image: url("https://images.pond5.com/futuristic-spaceship-hovering-above-planet-088989741_prevstill.jpeg");
+        }
+
+        .spase_photo {
+            height: 500px;
+            background-image: url("https://4kwallpapers.com/images/wallpapers/stars-galaxy-3840x2160-10307.jpg");
+        }
+
+        .content {
+            padding: 40px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 8px 12px;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #2760ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+     <nav class="navbar">
+        <img src="logo.png" alt="Space adventures Logo" class="logo">
+        <a href="index.html">Начало</a>
+
+        
+        <div class="dropdown">
+            <button class="dropbtn">Членовете на екипажа
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="aleksaVorte.html">Алекса Ворте</a>
+                <a href="lianaSky.html">Лияна Скай</a>
+                <a href="miraEstel.html">Мира Естел</a>
+                <a href="solvinArk.html">Солвин Арк</a>
+                <a href="kelvinRey.html">Келвин Рей</a>
+            </div>
+        </div>
+        <a href="info_za_chlen_na_ekipaja.html">Информация за член на екипажа</a>
+        <a href="status_na_koraba.html">Статус на кораба</a>
+    </nav>
+
+    
+    <div id="control_panel" class="parallax control_panel">"Space adventures"</div>
+    <section class="content">
+        <h2>"Space adventures"</h2>
+        <p>Мисия на "Space adventures" - Намирате се в космически кораб, като сте с хора, които не познавате. Мисията Ви е да се сработите и да успеете да се приберете в България.</p>
+        <p>Екипажът е преминал през портал, а крайната точка на портала е космическият кораб "Space adventures". Те пристигат по горе-долу едно и също време, но са объркани и не знаят какво се случва.</p>
+        <p>В кораба се появява холограма на друг човек, който отговаря на всичките им въпроси и приключението им започва.</p>
+   
+    </section>
+
+    <div id="ekipaj" class="parallax ekipaj">Екипаж</div>
+    <section class="content">
+        <h2>Членовете на екипажа:</h2>
+        <p>  </p>
+    </section>
+
+    <div id="info_za_chlen_na_ekipaja" class="parallax info_za_chlen_na_ekipaja">Информация за член на екипажа</div>
+    <section class="content">
+        <h2>Характеристики:</h2>
+    </section>
+    
+    <div id="status_na_koraba" class="parallax status_na_koraba">Статус на кораба</div>
+    <section class="content">
+        <h2>Тук ще разберете какво е състоянието на "Space adventures"</h2>
+    </section>
+
+    <div id="spase_photo" class="spase_photo"></div>
+    <section class="content">
+        
+    </section>
+
+</body>
+</html>
