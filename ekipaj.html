@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space adventures</title>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: black;
+        }
+
+        nav {
+            width: 100%;
+            background: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 18px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        nav a::before,
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #2760ff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav a::before {
+            top: 0;
+            transform-origin: left;
+        }
+
+        nav a::after {
+            bottom: 0;
+            transform-origin: right;
+        }
+
+
+        nav a:hover::before,
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        nav a:hover span::before,
+        nav a:hover span::after {
+            transform: scaleY(1);
+        }
+
+        nav {
+            width: 100%;
+            background: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            margin: 0;
+        }
+
+        .background1 {
+            min-height: 500px;
+            background-image: url("background1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            display: block;
+            margin: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 8px 12px;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #2760ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 100px auto 60px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #111;
+            color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body {
+            padding: 14px;
+        }
+
+        .card h3 {
+            margin: 8px 0 6px;
+            font-size: 18px;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #d7d7d7;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 420px) {
+            .card img {
+                height: 160px;
+            }
+
+            .card h3 {
+                font-size: 16px;
+            }
+        }
+
+        .page-banner {
+            width: 100%;
+            height: 350px;
+            background-image: url("background1.png");
+            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .page-banner h1 {
+            color: white;
+            font-size: 60px;
+            text-shadow: 0 0 15px black;
+            margin: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img src="logo.png" alt="Space adventures Logo" class="logo">
+        <a href="index.html">Начало</a>
+        <a href="ekipaj.html">Екипаж</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Членовете на екипажа
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="aleksaVorte.html">Алекса Ворте</a>
+                <a href="lianaSky.html">Лияна Скай</a>
+                <a href="miraEstel.html">Мира Естел</a>
+                <a href="solvinArk.html">Солвин Арк</a>
+                <a href="kelvinRey.html">Келвин Рей</a>
+            </div>
+        </div>
+        <a href="status_na_koraba.html">Статус на кораба</a>
+    </nav>
+
+    <div class="page-banner">
+        <h1>Екипаж</h1>
+    </div>
+    
+    <section class="cards">
+        <article class="card">
+            <img src="Alexa_Vorte.png" alt="Алекса Ворте">
+            <div class="card-body">
+                <h3>Алекса Ворте</h3>
+                <p>Навигатор. Хладнокръвна, експерт по астронавигация и картография.</p>
+                <br>
+                <p>Кратка характеристикиа: </p>
+                <p>-</p>
+                <p>Добро мислене ★★★</p>
+                <p>Прицизност ★★★★</p>
+                <p>Комуникативност ★★★★★</p>
+                <p>Сила ★★</p>
+                <p>Способност за бързи решения ★★★★</p>
+
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="Liana_Sky.png" alt="Лияна Скай">
+            <div class="card-body">
+                <h3>Лияна Скай</h3>
+                <p>Ръководител по биологичните изследвания на нови планети и проби.</p>
+
+                <br>
+                <p>Кратка характеристикиа: </p>
+                <p>-</p>
+                <p>Добро мислене ★★★</p>
+                <p>Прицизност ★★★★</p>
+                <p>Комуникативност ★★★★★</p>
+                <p>Сила ★★</p>
+                <p>Способност за бързи решения ★★★★</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="Mira_Estel.png" alt="Мира Естел">
+            <div class="card-body">
+                <h3>Мира Естел</h3>
+                <p>Поддържа всички вътрешни и външни комуникации на кораба.</p>
+
+                <br>
+                <p>Кратка характеристикиа: </p>
+                <p>-</p>
+                <p>Многоезична адаптивност ★★★</p>
+                <p>Спокойствие под натиск ★★★★</p>
+                <p>Синхронизация с екипа ★★★★★</p>
+                <p>Техническа грамотност ★★★</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="Solvin_Ark.png" alt="Солвин Арк">
+            <div class="card-body">
+                <h3>Солвин Арк</h3>
+                <p>Управлява основния контроли панел и следи състоянието на корабните системи.</p>
+
+                <br>
+                <p>Кратка характеристикиа: </p>
+                <p>-</p>
+                <p>Логическо мислене ★★★★★</p>
+                <p>Бързи реакции ★★★★</p>
+                <p>Концентрация и точност ★★★</p>
+                <p>Сила ★★★★</p>
+                <p>Способност за бързи решения ★★★★</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="Celvin_Rey.png" alt="Келвин Рей">
+            <div class="card-body">
+                <h3>Келвин Рей</h3>
+                <p>Отговаря за техническата поддръжка на кораба, включително ремонт на модули, оптимизация на софтуера и
+                    писане на системни кодове.</p>
+
+                <br>
+                <p>Кратка характеристикиа: </p>
+                <p>-</p>
+                <p>Гъвкавост в мисленето ★★★★★</p>
+                <p>Техническа прецизност ★★★</p>
+                <p>Сила ★★★★★</p>
+                <p>Способност за бързи решения ★★★★</p>
+            </div>
+        </article>
+    </section>
+    <div class="background1"></div>
+</body>
+
+</html>
