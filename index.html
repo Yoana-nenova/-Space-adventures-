@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="bg">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space adventures</title>
 
     <style>
-
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             background: black;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            background: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
         }
 
         nav a {
@@ -21,7 +37,6 @@
             padding: 8px 12px;
             font-size: 18px;
             font-weight: 500;
-            display: inline-block;
         }
 
         nav a::before,
@@ -45,39 +60,24 @@
             bottom: 0;
             transform-origin: right;
         }
-        
+
         nav a:hover::before,
         nav a:hover::after {
             transform: scaleX(1);
         }
 
-         nav {
-            width: 100%;
-            background: #111;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 30px;
-        }
-
         .logo {
-           height: 50px; 
-           width: 50px;
-           margin: 0;
+            height: 50px;
+            width: 50px;
         }
 
-
+        /* parallax scrolling */
         .parallax {
             height: 400px;
-            background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -85,7 +85,7 @@
             font-size: 50px;
             font-weight: bold;
             text-shadow: 0 0 15px black;
-            margin-top: 60px; 
+            margin-top: 60px;
         }
 
         .control_panel {
@@ -96,13 +96,12 @@
             background-image: url("https://th.bing.com/th/id/R.d44ca7bdb89dd1c1f3572675394379f5?rik=Y9RBuw5AvxNSdw&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fshots%2fl%2f469411-moonbase-alpha-windows-screenshot-astronauts-and-the-lunar.jpg&ehk=nGNesBrtfUMnfalZiEplTYG3%2f%2bqlNRO07xahvP6wMTk%3d&risl=&pid=ImgRaw&r=0");
         }
 
-        .info_za_chlen_na_ekipaja {
-            background-image: url("https://img.freepik.com/premium-photo/astronaut-alien-planet_989064-1128.jpg");
+        .status_na_koraba {
+            background-image: url("https://images.pond5.com/futuristic-spaceship-hovering-above-planet-088989741_prevstill.jpeg");
         }
 
-        .status_na_koraba {
-            height: 500px;
-            background-image: url("https://images.pond5.com/futuristic-spaceship-hovering-above-planet-088989741_prevstill.jpeg");
+        .osnovni_sistemi_na_koraba {
+            background-image: url("https://seyler.ekstat.com/img/max/800/x/xy6pPCYKRpRGZ2Uf-636099658573130877.jpg");
         }
 
         .spase_photo {
@@ -110,64 +109,80 @@
             background-image: url("https://4kwallpapers.com/images/wallpapers/stars-galaxy-3840x2160-10307.jpg");
         }
 
+        /* Content */
         .content {
             padding: 40px 20px;
             background: white;
             text-align: center;
         }
 
+        /* Dropdown menu*/
         .dropdown {
             position: relative;
-            display: inline-block;
         }
 
         .dropbtn {
-            color: white;
-            padding: 8px 12px;
-            font-size: 18px;
-            font-weight: 500;
-            border: none;
             background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
             cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #222;
+            background: #222;
             min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
             top: 100%;
-            left: 0;
         }
 
         .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
             display: block;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
         }
 
         .dropdown-content a:hover {
-            background-color: #2760ff;
+            background: #2760ff;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* SYSTEM BLOCK  */
+        .character-layout {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: black;
+        }
+
+        .character-image img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .character-info {
+            flex: 1;
+        }
     </style>
 </head>
+
 <body>
 
-     <nav class="navbar">
+    <!-- Падащо меню, видимо за всички страници  -->
+
+    <nav class="navbar">
         <img src="logo.png" alt="Space adventures Logo" class="logo">
         <a href="index.html">Начало</a>
         <a href="ekipaj.html">Екипаж</a>
-        
+
         <div class="dropdown">
             <button class="dropbtn">Членовете на екипажа
                 <i class="fa fa-caret-down"></i>
@@ -183,40 +198,158 @@
         <a href="status_na_koraba.html">Статус на кораба</a>
     </nav>
 
-    
+    <!-- Мисия на космическия кораб "Space adventures" -->
+
     <div id="control_panel" class="parallax control_panel">"Space adventures"</div>
     <section class="content">
         <h2>"Space adventures"</h2>
-        <p>Мисия на "Space adventures" - Намирате се в космически кораб, като сте с хора, които не познавате. Мисията Ви е да се сработите и да успеете да се приберете в България.</p>
-        <p>Екипажът е преминал през портал, а крайната точка на портала е космическият кораб "Space adventures". Те пристигат по горе-долу едно и също време, но са объркани и не знаят какво се случва.</p>
-        <p>В кораба се появява холограма на друг човек, който отговаря на всичките им въпроси и приключението им започва.</p>
-   
+        <font size=4>Мисия на "Space adventures" - Намирате се в космически кораб, като сте с хора, които не познавате.
+            Мисията Ви е да се сработите и да успеете да се приберете в България.</font>
+        <font size=4>Екипажът е преминал през портал, а крайната точка на портала е космическият кораб "Space
+            adventures". Те пристигат по горе-долу едно и също време, но са объркани и не знаят какво се случва.</font>
+        <font size=4>В кораба се появява холограма на друг човек, който отговаря на всичките им въпроси и приключението
+            им започва.</font>
+
     </section>
+
+    <!-- Екипажът -->
 
     <div id="ekipaj" class="parallax ekipaj">Екипаж</div>
     <section class="content">
         <h2>Членовете на екипажа:</h2>
-        <font size = 5><center><a href="aleksaVorte.html">Алекса Ворте</a></centre></font>
+        <font size=5>
+            <center><a href="aleksaVorte.html">Алекса Ворте</a></centre>
+        </font>
         <br>
-        <font size = 5><center><a href="lianaSky.html">Лияна Скай</a></centre></font>
+        <font size=5>
+            <center><a href="lianaSky.html">Лияна Скай</a></centre>
+        </font>
         <br>
-        <font size = 5><center><a href="miraEstel.html">Мира Естел</a></centre></font>
+        <font size=5>
+            <center><a href="miraEstel.html">Мира Естел</a></centre>
+        </font>
         <br>
-        <font size = 5><center><a href="solvinArk.html">Солвин Арк</a></centre></font>
+        <font size=5>
+            <center><a href="solvinArk.html">Солвин Арк</a></centre>
+        </font>
         <br>
-        <font size = 5><center><a href="kelvinRey.html">Келвин Рей</a></centre></font>
+        <font size=5>
+            <center><a href="kelvinRey.html">Келвин Рей</a></centre>
+        </font>
     </section>
+
+    <!-- Статус на кораба -->
 
     <div id="status_na_koraba" class="parallax status_na_koraba">Статус на кораба</div>
     <section class="content">
         <h2>Тук ще разберете какво е състоянието на "Space adventures"</h2>
-        <font size = 5><center><a href="status_na_koraba.html">Статус на кораба</a></centre></font>
+        <font size=5>
+            <center><a href="status_na_koraba.html">Статус на кораба</a></centre>
+        </font>
     </section>
 
-    <div id="spase_photo" class="spase_photo"></div>
+    <div id="osnovni_sistemi_na_koraba" class="parallax osnovni_sistemi_na_koraba">Основни системи на космическия кораб
+    </div>
     <section class="content">
-        
-    </section>
+        <h2>Тук ще разберете какви са основните системи на "Space adventures"</h2>
+        <font size=5>
+            <center>
+                </centre>
+        </font>
+        <!-- Секция основни системи -->
+        <section class="character-layout">
+            <section class="character-layout">
+                <div class="character-image">
+                    <img src="propulsion _system.png" alt="Задвижваща система">
+                </div>
+                <div class="character-info">
+                    <h1 class="char-name">
+                        <font size=5>Задвижваща система</font>
+                    </h1>
+                    <h1 class="char-name">
+                        <font size=5 color="#4f7dff">Propulsion System</font>
+                    </h1>
+                    <h2 class="char-role">Отговаря за движението и маневрирането на кораба:</h2>
+
+                    <p class="char-desc">
+                        <font size=4>
+                            Отговаря за движението, маневрирането и излизането от орбита;
+                        </font>
+                    </p>
+
+                    <p class="char-desc">
+                        <font size=4>
+                            Без нея корабът не може да се придвижва или да се върне обратно.
+                        </font>
+                    </p>
+
+                </div>
+            </section>
+        </section>
+
+
+
+        <section class="character-layout">
+            <section class="character-layout">
+                <div class="character-image">
+                    <img src="life_support_system.png" alt="Животоподдържаща система">
+                </div>
+                <div class="character-info">
+                    <h1 class="char-name">
+                        <font size=5>Животоподдържаща система</font>
+                    </h1>
+                    <h1 class="char-name">
+                        <font size=5 color="#4f7dff">Life Support System</font>
+                    </h1>
+                    <h2 class="char-role">Поддържа среда, в която екипажът може да оцелее — кислород, налягане,
+                        температура:</h2>
+
+                    <p class="char-desc">
+                        <font size=4>
+                            Регулира кислорода, налягането, температурата и премахва въглеродния диоксид;
+                        </font>
+                    </p>
+
+                    <p class="char-desc">
+                        <font size=4>
+                            Поддържа среда, в която екипажът може да оцелее.
+                        </font>
+                    </p>
+
+                </div>
+            </section>
+        </section>
+
+
+        <section class="character-layout">
+            <section class="character-layout">
+                <div class="character-image">
+                    <img src="communication_system.png" alt="Комуникационна система">
+                </div>
+                <div class="character-info">
+                    <h1 class="char-name">
+                        <font size=5>Комуникационна система</font>
+                    </h1>
+                    <h1 class="char-name">
+                        <font size=5 color="#4f7dff">Communication System</font>
+                    </h1>
+                    <h2 class="char-role">Осигурява връзка със Земята и други кораби:</h2>
+
+                    <p class="char-desc">
+                        <font size=4>
+                            Критична за навигация, координация и аварийни ситуации.
+                        </font>
+                    </p>
+
+                </div>
+            </section>
+        </section>
+
+        <div id="spase_photo" class="spase_photo"></div>
+        <section class="content">
+
+        </section>
 
 </body>
+
 </html>
