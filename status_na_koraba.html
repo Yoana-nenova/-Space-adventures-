@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Статус на кораба</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b0f1a;
+            color: #f0f0f0;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            background: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+        }
+
+        nav a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 18px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        nav a::before,
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #2760ff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav a::before {
+            top: 0;
+            transform-origin: left;
+        }
+
+        nav a::after {
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        nav a:hover::before,
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Падащо меню */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 8px 12px;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            min-width: 200px;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #2760ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Background for the title */
+        .page-banner {
+            width: 100%;
+            height: 200px;
+            background-image: url("status_panel_design.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        }
+
+        .page-banner h1 {
+            color: white;
+            font-size: 60px;
+            text-shadow: 0 0 15px black;
+            margin: 0;
+        }
+
+        /* Info */
+        h1 {
+            text-align: center;
+            color: #4db8ff;
+        }
+
+        .section {
+            background-color: #1a2233;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        .section h2 {
+            color: #4db8ff;
+            margin-top: 0;
+        }
+
+        .status-indicator {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #4db8ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 0 auto 10px;
+        }
+
+        .panel {
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .status-bar {
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+
+        .status-fill {
+            height: 12px;
+            background-color: #4db8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="logo.png" alt="Space adventures Logo" class="logo">
+        <a href="index.html">Начало</a>
+        <a href="ekipaj.html">Екипаж</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Членовете на екипажа</button>
+            <div class="dropdown-content">
+                <a href="aleksaVorte.html">Алекса Ворте</a>
+                <a href="lianaSky.html">Лияна Скай</a>
+                <a href="miraEstel.html">Мира Естел</a>
+                <a href="solvinArk.html">Солвин Арк</a>
+                <a href="kelvinRey.html">Келвин Рей</a>
+            </div>
+        </div>
+
+        <a href="status_na_koraba.html">Статус на кораба</a>
+    </nav>
+
+    <div class="page-banner">
+        <h1>Статус на кораба</h1>
+    </div>
+
+
+    <!-- General status -->
+    <div class="section">
+        <h2>Общ статус</h2>
+        <div class="status-indicator">98%</div>
+        <p>Корабът функционира нормално.</p>
+    </div>
+
+    <!-- Spaceship systems -->
+    <div class="section">
+        <h2>Системи на кораба</h2>
+        <div class="panel">
+            <strong>Задвижване</strong>
+            <div class="status-bar">
+                <div class="status-fill" style="width:76%"></div>
+            </div>
+            <p>Тяга: 76%</p>
+        </div>
+        <div class="panel">
+            <strong>Животоподдържане</strong>
+            <div class="status-bar">
+                <div class="status-fill" style="width:100%"></div>
+            </div>
+            <p>Атмосфера стабилна</p>
+        </div>
+        <div class="panel">
+            <strong>Комуникация</strong>
+            <div class="status-bar">
+                <div class="status-fill" style="width:100%"></div>
+            </div>
+            <p>Свързан със Земята</p>
+        </div>
+    </div>
+
+    <!-- Location and trajectory -->
+    <div class="section">
+        <h2>Локация и траектория</h2>
+        <p>Скорост: 7.6 km/s</p>
+        <p>Орбита: 320 km – 410 km</p>
+    </div>
+
+    <!-- Crew and interior environment of the spacecraft -->
+    <div class="section">
+        <h2>Екипаж и вътрешна среда</h2>
+        <p>Екипаж: 4 активни</p>
+        <p>Температура: 22°C • Влажност: 45%</p>
+    </div>
+
+    <!-- Scientific modules / Mission -->
+    <div class="section">
+        <h2>Научни модули / мисия</h2>
+        <p>Активни експерименти: 3</p>
+        <p>Следваща задача: проби от астероид</p>
+    </div>
+
+</body>
+
+</html>
