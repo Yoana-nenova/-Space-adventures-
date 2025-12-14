@@ -15,6 +15,8 @@
             background: black;
         }
 
+        /* Navbar */
+
         nav {
             width: 100%;
             background: #111;
@@ -77,11 +79,15 @@
             transform: scaleX(1);
         }
 
+        /* Logo styles */
+
         .logo {
             height: 50px;
             width: 50px;
             margin: 0;
         }
+
+        /* Background images */
 
         .background2 {
             min-height: 500px;
@@ -93,6 +99,8 @@
             display: block;
             margin: 0;
         }
+
+        /* Dropdown menu */
 
         .dropdown {
             position: relative;
@@ -138,6 +146,7 @@
             display: block;
         }
 
+        /* Page banner and character layout */
         .page-banner {
             width: 100%;
             height: 350px;
@@ -210,10 +219,39 @@
             font-size: 24px;
         }
 
+        /* Buttons */
+
+        .btn {
+            display: inline-block;
+            background: #2760ff;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+            transition: transform .12s ease, background .12s ease;
+            position: relative;
+        }
+
+        .btn:hover {
+            background: #1f54e6;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .nav-actions {
+            margin-top: 18px;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Navbar menu-->
 
     <nav class="navbar">
         <img src="logo.png" alt="Space adventures Logo" class="logo">
@@ -235,6 +273,8 @@
         <a href="status_na_koraba.html">Статус на кораба</a>
     </nav>
 
+    <!-- More info for Mira Estel-->
+
     <div class="page-banner">
         <h1>Мира Естел</h1>
     </div>
@@ -249,8 +289,8 @@
             <h2 class="char-role">Комуникационен специалист</h2>
 
             <p class="char-desc">
-                Поддържа всички вътрешни и външни комуникации на кораба. 
-                Осигурява безопасна връзка с базата, декодира сигнали, 
+                Поддържа всички вътрешни и външни комуникации на кораба.
+                Осигурява безопасна връзка с базата, декодира сигнали,
                 изпраща съобщения и контролира комуникационните антени и криптосистеми.
             </p>
 
@@ -263,6 +303,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Buttons for the next and previous page-->
+    <div class="nav-actions">
+        <a class="btn" href="lianaSky.html" title="Отиди при Лияна Скай"> ← Назад към Лияна Скай </a>
+    </div>
+
+    <div class="nav-actions">
+        <a class="btn" href="solvinArk.html" title="Отиди при Солвин Арк"> Напред към Солвин Арк →</a>
+    </div>
+
     <div class="background4"></div>
 </body>
 
