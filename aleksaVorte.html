@@ -15,6 +15,8 @@
             background: black;
         }
 
+        /* Navbar */
+
         nav {
             width: 100%;
             background: #111;
@@ -77,11 +79,15 @@
             transform: scaleX(1);
         }
 
+        /* Photo - logo */
+
         .logo {
             height: 50px;
             width: 50px;
             margin: 0;
         }
+
+        /* Background for the title */
 
         .background2 {
             min-height: 500px;
@@ -93,6 +99,8 @@
             display: block;
             margin: 0;
         }
+
+        /* Dropdown menu */
 
         .dropdown {
             position: relative;
@@ -137,6 +145,8 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* Page banner and character layout */
 
         .page-banner {
             width: 100%;
@@ -210,10 +220,39 @@
             font-size: 24px;
         }
 
+        /* Buttons for the spaceship crew */
+
+        .btn {
+            display: inline-block;
+            background: #2760ff;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+            transition: transform .12s ease, background .12s ease;
+            position: relative;
+        }
+
+        .btn:hover {
+            background: #1f54e6;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .nav-actions {
+            margin-top: 18px;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Navbar menu-->
 
     <nav class="navbar">
         <img src="logo.png" alt="Space adventures Logo" class="logo">
@@ -235,6 +274,8 @@
         <a href="status_na_koraba.html">Статус на кораба</a>
     </nav>
 
+    <!-- More info for Alexa Vorte-->
+
     <div class="page-banner">
         <h1>Алекса Ворте</h1>
     </div>
@@ -249,8 +290,8 @@
             <h2 class="char-role">Навигационен офицер</h2>
 
             <p class="char-desc">
-                Отговаря за планирането и координирането на всички навигационни маршрути. 
-                Следи сензорите, избира най-безопасните пътища и предупреждава екипажа за опасности като 
+                Отговаря за планирането и координирането на всички навигационни маршрути.
+                Следи сензорите, избира най-безопасните пътища и предупреждава екипажа за опасности като
                 астероидни полета, гравитационни аномалии или непознати зони.
             </p>
 
@@ -263,7 +304,13 @@
             </div>
         </div>
     </section>
-    <div class="background2"></div>
+
+    <!-- Button for the next page-->
+
+    <div class="nav-actions">
+        <a class="btn" href="lianaSky.html" title="Отиди при Лияна Скай"> Напред към Лияна Скай →</a>
+    </div>
+
 </body>
 
 </html>
