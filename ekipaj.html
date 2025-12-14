@@ -15,7 +15,7 @@
             background: black;
         }
 
-
+        /* Navbar */
         nav a {
             position: relative;
             color: white;
@@ -48,12 +48,10 @@
             transform-origin: right;
         }
 
-
         nav a:hover::before,
         nav a:hover::after {
             transform: scaleX(1);
         }
-
 
         nav {
             width: 100%;
@@ -69,23 +67,14 @@
             gap: 30px;
         }
 
+        /* Photo - logo */
         .logo {
             height: 50px;
             width: 50px;
             margin: 0;
         }
 
-        .background1 {
-            min-height: 500px;
-            background-image: url("background1.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: scroll;
-            display: block;
-            margin: 0;
-        }
-
+        /* Dropdown menu */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -130,6 +119,7 @@
             display: block;
         }
 
+        /* Spaceship crew's cards */
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -154,7 +144,6 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
-            display: block;
         }
 
         .card-body {
@@ -190,11 +179,9 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             margin-top: 60px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
         }
@@ -206,10 +193,39 @@
             margin: 0;
             font-weight: bold;
         }
+
+        /* Buttons for the spaceship crew */
+        .btn {
+            display: inline-block;
+            background: #2760ff;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+            transition: transform .12s ease, background .12s ease;
+            position: relative;
+        }
+
+        .btn:hover {
+            background: #1f54e6;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .nav-actions {
+            margin-top: 18px;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Navbar menu-->
 
     <nav class="navbar">
         <img src="logo.png" alt="Space adventures Logo" class="logo">
@@ -234,21 +250,41 @@
     <div class="page-banner">
         <h1>Екипаж</h1>
     </div>
-    
+
+    <!-- Cards -->
+
     <section class="cards">
         <article class="card">
             <img src="Alexa_Vorte.png" alt="Алекса Ворте">
             <div class="card-body">
-                <h3>Алекса Ворте</h3>
-                <p>Навигатор. Хладнокръвна, експерт по астронавигация и картография.</p>
+                <h3>
+                    <font size=4>Алекса Ворте</font>
+                </h3>
+                <p>
+                    <font size=3>Навигатор. Хладнокръвна, експерт по астронавигация и картография.</font>
+                </p>
                 <br>
-                <p>Кратка характеристикиа: </p>
-                <p>-</p>
-                <p>Добро мислене ★★★</p>
-                <p>Прицизност ★★★★</p>
-                <p>Комуникативност ★★★★★</p>
-                <p>Сила ★★</p>
-                <p>Способност за бързи решения ★★★★</p>
+                <p>
+                    <font size=3>Кратка характеристика:</font>
+                </p>
+                <p>
+                    <font size=3>-</font>
+                </p>
+                <p>
+                    <font size=3>Добро мислене ★★★</font>
+                </p>
+                <p>
+                    <font size=3>Прицизност ★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Комуникативност ★★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Сила ★★</font>
+                </p>
+                <p>
+                    <font size=3>Способност за бързи решения ★★★★</font>
+                </p>
 
             </div>
         </article>
@@ -256,71 +292,161 @@
         <article class="card">
             <img src="Liana_Sky.png" alt="Лияна Скай">
             <div class="card-body">
-                <h3>Лияна Скай</h3>
-                <p>Ръководител по биологичните изследвания на нови планети и проби.</p>
+                <h3>
+                    <font size=4>Лияна Скай</font>
+                </h3>
+                <p>
+                    <font size=3>Ръководител по биологичните изследвания на нови планети и проби.</font>
+                </p>
 
                 <br>
-                <p>Кратка характеристикиа: </p>
+                <p>
+                    <font size=3>Кратка характеристика: </font>
+                </p>
                 <p>-</p>
-                <p>Добро мислене ★★★</p>
-                <p>Прицизност ★★★★</p>
-                <p>Комуникативност ★★★★★</p>
-                <p>Сила ★★</p>
-                <p>Способност за бързи решения ★★★★</p>
+                <p>
+                    <font size=3>Добро мислене ★★★</font>
+                </p>
+                <p>
+                    <font size=3>Прицизност ★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Комуникативност ★★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Сила ★★</font>
+                </p>
+                <p>
+                    <font size=3>Способност за бързи решения ★★★★</font>
+                </p>
             </div>
         </article>
 
         <article class="card">
             <img src="Mira_Estel.png" alt="Мира Естел">
             <div class="card-body">
-                <h3>Мира Естел</h3>
-                <p>Поддържа всички вътрешни и външни комуникации на кораба.</p>
+                <h3>
+                    <font size=4>Мира Естел</font>
+                </h3>
+                <p>
+                    <font size=3>Поддържа всички вътрешни и външни комуникации на кораба.</font>
+                </p>
 
                 <br>
-                <p>Кратка характеристикиа: </p>
-                <p>-</p>
-                <p>Многоезична адаптивност ★★★</p>
-                <p>Спокойствие под натиск ★★★★</p>
-                <p>Синхронизация с екипа ★★★★★</p>
-                <p>Техническа грамотност ★★★</p>
+                <p>
+                    <font size=3>Кратка характеристика: </font>
+                </p>
+                <p>
+                    <font size=3>-</font>
+                </p>
+                <p>
+                    <font size=3>Многоезична адаптивност ★★★</font>
+                </p>
+                <p>
+                    <font size=3>Спокойствие под натиск ★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Синхронизация с екипа ★★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Техническа грамотност ★★★</font>
+                </p>
             </div>
         </article>
 
         <article class="card">
             <img src="Solvin_Ark.png" alt="Солвин Арк">
             <div class="card-body">
-                <h3>Солвин Арк</h3>
-                <p>Управлява основния контроли панел и следи състоянието на корабните системи.</p>
+                <h3>
+                    <font size=4>Солвин Арк</font>
+                </h3>
+                <p>
+                    <font size=3>Управлява основния контроли панел и следи състоянието на корабните системи.</font>
+                </p>
 
                 <br>
-                <p>Кратка характеристикиа: </p>
-                <p>-</p>
-                <p>Логическо мислене ★★★★★</p>
-                <p>Бързи реакции ★★★★</p>
-                <p>Концентрация и точност ★★★</p>
-                <p>Сила ★★★★</p>
-                <p>Способност за бързи решения ★★★★</p>
+                <p>
+                    <font size=3>Кратка характеристика: </font>
+                </p>
+                <p>
+                    <font size=3>-</font>
+                </p>
+                <p>
+                    <font size=3>Логическо мислене ★★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Бързи реакции ★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Концентрация и точност ★★★</font>
+                </p>
+                <p>
+                    <font size=3>Сила ★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Способност за бързи решения ★★★★</font>
+                </p>
             </div>
         </article>
 
         <article class="card">
             <img src="Celvin_Rey.png" alt="Келвин Рей">
             <div class="card-body">
-                <h3>Келвин Рей</h3>
-                <p>Отговаря за техническата поддръжка на кораба, включително ремонт на модули, оптимизация на софтуера и
-                    писане на системни кодове.</p>
+                <h3>
+                    <font size=4>Келвин Рей</font>
+                </h3>
+                <p>
+                    <font size=3>Отговаря за техническата поддръжка на кораба, включително ремонт на модули, оптимизация
+                        на софтуера и
+                        писане на системни кодове.</font>
+                </p>
 
                 <br>
-                <p>Кратка характеристикиа: </p>
-                <p>-</p>
-                <p>Гъвкавост в мисленето ★★★★★</p>
-                <p>Техническа прецизност ★★★</p>
-                <p>Сила ★★★★★</p>
-                <p>Способност за бързи решения ★★★★</p>
+                <p>
+                    <font size=3>Кратка характеристика: </font>
+                </p>
+                <p>
+                    <font size=3>-</font>
+                </p>
+                <p>
+                    <font size=3>Гъвкавост в мисленето ★★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Техническа прецизност ★★★</font>
+                </p>
+                <p>
+                    <font size=3>Сила ★★★★★</font>
+                </p>
+                <p>
+                    <font size=3>Способност за бързи решения ★★★★</font>
+                </p>
             </div>
         </article>
     </section>
-    <div class="background1"></div>
+
+    <!-- Buttons -->
+
+    <div class="nav-actions">
+        <a class="btn" href="aleksaVorte.html" title="Отиди при Алекса Ворте"> Повече информация за Алекса Ворте →</a>
+    </div>
+
+    <div class="nav-actions">
+        <a class="btn" href="lianaSky.html" title="Отиди при Лияна Скай"> Повече информация за Лияна Скай →</a>
+    </div>
+
+    <div class="nav-actions">
+        <a class="btn" href="miraEstel.html" title="Отиди при Мира Естел"> Повече информация за Мира Естел →</a>
+    </div>
+
+    <div class="nav-actions">
+        <a class="btn" href="solvinArk.html" title="Отиди при Солвин Арк"> Повече информация за Солвин Арк →</a>
+    </div>
+
+    <div class="nav-actions">
+        <a class="btn" href="kelvinRey.html" title="Отиди при Келвин Рей"> Повече информация за Келвин Рей →</a>
+    </div>
+
+
 </body>
 
 </html>
