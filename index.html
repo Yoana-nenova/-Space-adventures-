@@ -66,12 +66,14 @@
             transform: scaleX(1);
         }
 
+        /* Logo "Space adventures" */
+
         .logo {
             height: 50px;
             width: 50px;
         }
 
-        /* parallax scrolling */
+        /* Parallax sections */
         .parallax {
             height: 400px;
             background-position: center;
@@ -104,19 +106,14 @@
             background-image: url("https://seyler.ekstat.com/img/max/800/x/xy6pPCYKRpRGZ2Uf-636099658573130877.jpg");
         }
 
-        .spase_photo {
-            height: 500px;
-            background-image: url("https://4kwallpapers.com/images/wallpapers/stars-galaxy-3840x2160-10307.jpg");
-        }
-
-        /* Content */
+        /* Content sections */
         .content {
             padding: 40px 20px;
             background: white;
             text-align: center;
         }
 
-        /* Dropdown menu*/
+        /* Dropdown menu */
         .dropdown {
             position: relative;
         }
@@ -152,7 +149,7 @@
             display: block;
         }
 
-        /* SYSTEM BLOCK  */
+        /* Character info */
         .character-layout {
             display: flex;
             gap: 30px;
@@ -164,20 +161,46 @@
         }
 
         .character-image img {
-            width: 300px;
+            width: 500px;
             border-radius: 10px;
         }
 
         .character-info {
             flex: 1;
         }
+
+        /* Button  */
+        .btn {
+            display: inline-block;
+            background: #2760ff;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+            transition: transform .12s ease, background .12s ease;
+            position: relative;
+        }
+
+        .btn:hover {
+            background: #1f54e6;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .nav-actions {
+            margin-top: 18px;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Падащо меню, видимо за всички страници  -->
-
+    <!-- Dropdown menu  -->
     <nav class="navbar">
         <img src="logo.png" alt="Space adventures Logo" class="logo">
         <a href="index.html">Начало</a>
@@ -198,158 +221,87 @@
         <a href="status_na_koraba.html">Статус на кораба</a>
     </nav>
 
-    <!-- Мисия на космическия кораб "Space adventures" -->
-
+    <!-- Mission of "Space adventures" -->
     <div id="control_panel" class="parallax control_panel">"Space adventures"</div>
     <section class="content">
         <h2>"Space adventures"</h2>
-        <font size=4>Мисия на "Space adventures" - Намирате се в космически кораб, като сте с хора, които не познавате.
-            Мисията Ви е да се сработите и да успеете да се приберете в България.</font>
-        <font size=4>Екипажът е преминал през портал, а крайната точка на портала е космическият кораб "Space
-            adventures". Те пристигат по горе-долу едно и също време, но са объркани и не знаят какво се случва.</font>
-        <font size=4>В кораба се появява холограма на друг човек, който отговаря на всичките им въпроси и приключението
-            им започва.</font>
-
+        <font size=4>Мисия на "Space adventures" - Намирате се в космически кораб, като сте с хора, които не познавате. Мисията Ви е да се сработите и да успеете да се приберете в България.</font>
+        <font size=4>Екипажът е преминал през портал, а крайната точка на портала е космическия кораб "Space adventures". Те пристигат горе-долу по едно и също време, но са объркани и не знаят какво се случва.</font>
+        <font size=4>В кораба се появява холограма на друг човек, който отговаря на всичките им въпроси и приключението им започва.</font>
     </section>
 
-    <!-- Екипажът -->
-
+    <!-- Spaceship crew -->
     <div id="ekipaj" class="parallax ekipaj">Екипаж</div>
     <section class="content">
         <h2>Членовете на екипажа:</h2>
-        <font size=5>
-            <center><a href="aleksaVorte.html">Алекса Ворте</a></centre>
-        </font>
+        <font size=5><center><a href="aleksaVorte.html">Алекса Ворте</a></center></font>
         <br>
-        <font size=5>
-            <center><a href="lianaSky.html">Лияна Скай</a></centre>
-        </font>
+        <font size=5><center><a href="lianaSky.html">Лияна Скай</a></center></font>
         <br>
-        <font size=5>
-            <center><a href="miraEstel.html">Мира Естел</a></centre>
-        </font>
+        <font size=5><center><a href="miraEstel.html">Мира Естел</a></center></font>
         <br>
-        <font size=5>
-            <center><a href="solvinArk.html">Солвин Арк</a></centre>
-        </font>
+        <font size=5><center><a href="solvinArk.html">Солвин Арк</a></center></font>
         <br>
-        <font size=5>
-            <center><a href="kelvinRey.html">Келвин Рей</a></centre>
-        </font>
+        <font size=5><center><a href="kelvinRey.html">Келвин Рей</a></center></font>
     </section>
 
-    <!-- Статус на кораба -->
-
+    <!-- Spaceship status -->
     <div id="status_na_koraba" class="parallax status_na_koraba">Статус на кораба</div>
     <section class="content">
         <h2>Тук ще разберете какво е състоянието на "Space adventures"</h2>
-        <font size=5>
-            <center><a href="status_na_koraba.html">Статус на кораба</a></centre>
-        </font>
+        <font size=5><center><a href="status_na_koraba.html">Статус на кораба</a></center></font>
     </section>
 
-    <div id="osnovni_sistemi_na_koraba" class="parallax osnovni_sistemi_na_koraba">Основни системи на космическия кораб
-    </div>
+    <!-- Main Systems -->
+    <div id="osnovni_sistemi_na_koraba" class="parallax osnovni_sistemi_na_koraba">Основни системи на космическия кораб</div>
     <section class="content">
-        <h2>Тук ще разберете какви са основните системи на "Space adventures"</h2>
-        <font size=5>
-            <center>
-                </centre>
-        </font>
-        <!-- Секция основни системи -->
+        <h2>Това са трите най-важни системи на "Space adventures":</h2>
+
+        <!-- Main Systems Section -->
         <section class="character-layout">
-            <section class="character-layout">
-                <div class="character-image">
-                    <img src="propulsion _system.png" alt="Задвижваща система">
-                </div>
-                <div class="character-info">
-                    <h1 class="char-name">
-                        <font size=5>Задвижваща система</font>
-                    </h1>
-                    <h1 class="char-name">
-                        <font size=5 color="#4f7dff">Propulsion System</font>
-                    </h1>
-                    <h2 class="char-role">Отговаря за движението и маневрирането на кораба:</h2>
-
-                    <p class="char-desc">
-                        <font size=4>
-                            Отговаря за движението, маневрирането и излизането от орбита;
-                        </font>
-                    </p>
-
-                    <p class="char-desc">
-                        <font size=4>
-                            Без нея корабът не може да се придвижва или да се върне обратно.
-                        </font>
-                    </p>
-
-                </div>
-            </section>
+            <div class="character-image">
+                <img src="zadvijvashta.png" alt="Задвижваща система">
+            </div>
+            <div class="character-info">
+                <h1 class="char-name"><font size=5>Задвижваща система</font></h1>
+                <h1 class="char-name"><font size=5 color="#4f7dff">Propulsion System</font></h1>
+                <h2 class="char-role">Отговаря за движението и маневрирането на кораба:</h2>
+                <p class="char-desc"><font size=4>Отговаря за движението, маневрирането и излизането от орбита;</font></p>
+                <p class="char-desc"><font size=4>Без нея корабът не може да се придвижва или да се върне обратно.</font></p>
+            </div>
         </section>
-
-
 
         <section class="character-layout">
-            <section class="character-layout">
-                <div class="character-image">
-                    <img src="life_support_system.png" alt="Животоподдържаща система">
-                </div>
-                <div class="character-info">
-                    <h1 class="char-name">
-                        <font size=5>Животоподдържаща система</font>
-                    </h1>
-                    <h1 class="char-name">
-                        <font size=5 color="#4f7dff">Life Support System</font>
-                    </h1>
-                    <h2 class="char-role">Поддържа среда, в която екипажът може да оцелее — кислород, налягане,
-                        температура:</h2>
-
-                    <p class="char-desc">
-                        <font size=4>
-                            Регулира кислорода, налягането, температурата и премахва въглеродния диоксид;
-                        </font>
-                    </p>
-
-                    <p class="char-desc">
-                        <font size=4>
-                            Поддържа среда, в която екипажът може да оцелее.
-                        </font>
-                    </p>
-
-                </div>
-            </section>
+            <div class="character-image">
+                <img src="jivtopoddurjashta.png" alt="Животоподдържаща система">
+            </div>
+            <div class="character-info">
+                <h1 class="char-name"><font size=5>Животоподдържаща система</font></h1>
+                <h1 class="char-name"><font size=5 color="#4f7dff">Life Support System</font></h1>
+                <h2 class="char-role">Поддържа среда, в която екипажът може да оцелее — кислород, налягане, температура:</h2>
+                <p class="char-desc"><font size=4>Регулира кислорода, налягането, температурата и премахва въглеродния диоксид;</font></p>
+                <p class="char-desc"><font size=4>Поддържа среда, в която екипажът може да оцелее.</font></p>
+            </div>
         </section>
-
 
         <section class="character-layout">
-            <section class="character-layout">
-                <div class="character-image">
-                    <img src="communication_system.png" alt="Комуникационна система">
-                </div>
-                <div class="character-info">
-                    <h1 class="char-name">
-                        <font size=5>Комуникационна система</font>
-                    </h1>
-                    <h1 class="char-name">
-                        <font size=5 color="#4f7dff">Communication System</font>
-                    </h1>
-                    <h2 class="char-role">Осигурява връзка със Земята и други кораби:</h2>
-
-                    <p class="char-desc">
-                        <font size=4>
-                            Критична за навигация, координация и аварийни ситуации.
-                        </font>
-                    </p>
-
-                </div>
-            </section>
+            <div class="character-image">
+                <img src="komunikacionna.png" alt="Комуникационна система">
+            </div>
+            <div class="character-info">
+                <h1 class="char-name"><font size=5>Комуникационна система</font></h1>
+                <h1 class="char-name"><font size=5 color="#4f7dff">Communication System</font></h1>
+                <h2 class="char-role">Осигурява връзка със Земята и други кораби:</h2>
+                <p class="char-desc"><font size=4>Критична за навигация, координация и аварийни ситуации.</font></p>
+            </div>
         </section>
 
-        <div id="spase_photo" class="spase_photo"></div>
-        <section class="content">
+    </section>
 
-        </section>
+    <!-- Button for Ship Status Page -->
+    <div class="nav-actions">
+        <a class="btn" href="status_na_koraba.html" title="Отиди при Статус на корабът">Разгледай панела →</a>
+    </div>
 
 </body>
-
 </html>
