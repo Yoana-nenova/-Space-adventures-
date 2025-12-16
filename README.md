@@ -1,9 +1,15 @@
-# -Space-adventures-
-"Space adventures" е игра, в която героите са попаднали още от самото начало в космически кораб с други герои, които дори не познават. Преди да започнат играта имат опции за избор на герой, като е дадена кратка характеристика за всички опции със качествата им, силните им страни и тяхна снимка. Всяко едно качество и умение ще бъде ,,оценено" със звездички, за да си направите представа за тях. Главната идея е да се сработят и да успяват да изпълняват мисии и да се върнат в България. В кораба са попаднали от портали, като дори не са знаели, че ще попаднат в Космоса.
-Чрез сайтът ми "Space adventures" обяснявам правилата на играта и вътре в него е цялата информация относно играта. Като например екипажа на кораба (тоест героите на играта), по-подробна информация за екипажа и статус на кораба, тоест състоянието му в началото на играта.
+Space Adventures
 
-Инсталационни стъпки:
-Нужни са само кодовете, които съм качила. Ако при стартиране на проекта ми не се зареди някоя от снимките, които съм качила, ще трябва да се изтеглят на устройството Ви.
+“Space Adventures” is a game in which the characters find themselves, right from the very beginning, on a spaceship together with other characters whom they do not even know. Before starting the game, players have options to choose a character, and a short description is provided for each option, including their qualities, strengths, and an image. Each quality and skill will be “rated” with stars so that players can get an idea of them.
 
-Инструкции за използване на сайт "Space adventures":
-Благодарение на кода и всички страници, които съм направила, която и страница да стартиране първо, тя ще Ви отведе до останалите, благодарение на navbar менюто, което е видимо за всички страници. 
+The main idea is for the characters to work together, successfully complete missions, and return to Bulgaria. They have entered the spaceship through portals, without even knowing that they would end up in space.
+
+Through my website “Space Adventures”, I explain the rules of the game, and it contains all the information related to the game. For example, it includes the ship’s crew (that is, the game characters), more detailed information about the crew, and the status of the ship, meaning its condition at the beginning of the game.
+
+Installation steps:
+
+Only the code that I have uploaded is needed. If, when starting my project, some of the images do not load, they will need to be downloaded to your device.
+
+Instructions for using the “Space Adventures” website:
+
+Thanks to the code and all the pages I have created, no matter which page you start with, it will lead you to the others through the navbar menu, which is visible on all pages.
